@@ -1,0 +1,6 @@
+Hello, my name is Maxim
+And I hope that code that I've just written will work
+
+So this is test file
+
+GLHF

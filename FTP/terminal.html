@@ -1,0 +1,22 @@
+{{define "index"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Terminal</title>
+</head>
+<body>
+<form action="/term" method="post">
+    Command: <input id="cmdIn" type="text" name="cmdIn" value="">
+    <input type="submit" value="Execute">
+    <button formaction="/logout">Exit</button>
+</form>
+<div style="overflow-y: scroll; height:400px;">
+    {{ range $v, $k := . }}
+    <p>{{$k.Cmd}}</p>
+    <p>{{$k.Answer}}</p>
+    {{end}}
+</div>
+</body>
+</html>
+{{end}}
